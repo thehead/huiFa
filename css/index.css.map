@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AA6EA,KAAW;EACP,UAAU,EAAE,kBAAkB;EAC9B,eAAe,EAAE,kBAAkB;EACnC,aAAa,EAAE,kBAAkB;EACjC,kBAAkB,EAAE,kBAAkB;EACtC,UAAU,EAAE,kBAAkB",
+"sources": ["sassFn.scss"],
+"names": [],
+"file": "index.css"
+}

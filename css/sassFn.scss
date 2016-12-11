@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+
+
+%width100{
+    width:100%;
+}
+%fl{
+    float:left;
+}
+%fr{
+    float:right;
+}
+%mc1{
+    color:#006dbb;
+}
+%mc2{
+    color:#221815;
+}
+
+
+%clearfix {
+    &:after {
+        clear: both;
+        content: '.';
+        display: block;
+        height: 0;
+        line-height: 0;
+        font-size: 0;
+        overflow: hidden;
+    }
+    *height: 1%;
+    *height:auto !important;
+}
+
+%box-sizing{
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@mixin positionA($top,$right,$bottom,$left){
+    position:absolute;
+    @if $top !="auto"{
+      top:$top;  
+    }
+    @if $left !="auto"{
+      left:$left;  
+    }
+    @if $right !="auto"{
+      right: $right;
+    }
+    @if $bottom !="auto"{
+      bottom:$bottom;
+    }
+}
+
+%background-cover{
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+@mixin f-webkit($type, $value){
+    -webkit-#{$type}: $value;
+    -moz-#{$type}: $value;
+    -ms-#{$type}: $value;
+    -o-#{$type}: $value;
+    #{$type}: $value;
+}
+
+
+
+%transition{
+    transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+@mixin common-title-color($bgColor){
+    background-color:$bgColor;
+    color:#fff;
+}
+
+
