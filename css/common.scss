@@ -1,5 +1,7 @@
 @import "sassFn";
 $mianColor:#d2b701;
+$bgColor:#fdfff7;
+$borderColor:#bdbdbd;
 $darkColor:#b57701;
 $fontColor:#868686;
 .container{
@@ -16,8 +18,11 @@ html,body{
 }
 //header
 header{
-  position: relative;
-  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 21;
   height: 100px;
   font-size: 17px;
   font-weight: 500;
@@ -212,6 +217,58 @@ footer{
       p:last-child{
         @extend %fr;
       }
+    }
+  }
+}
+
+@media (max-width: 930px){
+  .nav{
+    position: relative!important;
+    form{
+      position: absolute!important;
+      left: -30px;
+      top: 6px;
+    }
+  }
+  .navBtn{
+    width: 120px;
+    line-height: 100px;
+    display: block!important;
+    overflow: hidden;
+    text-align: center;
+    img{
+      padding-top: 30px;
+      width: 40px;
+    }
+  }
+
+  .navList{
+    height: 0;
+    //overflow: hidden;
+    margin-top: -14px;
+    padding: 0 !important;
+    -webkit-transition: 1s all ease !important;
+    transition: 1s all ease !important;
+    li{
+      width: 120px;
+      padding: 0!important;
+      text-align: center;
+      background: rgba(255,255,255,0.85);
+      border: 1px solid $borderColor;
+      display: block!important;
+      line-height: 50px;
+    }
+    .infoNews{
+      ul{
+        top:0!important;
+        left: -102%!important;
+        height: 104px;
+      }
+    }
+    .infoNews:hover{
+    }
+    &.active{
+      height: 260px;
     }
   }
 }

@@ -70,7 +70,9 @@ html {
      }
      (this));
 }
-
+body{
+    font-family:Microsoft yahei;
+}
 a{text-decoration: none;}
 
 figure {
