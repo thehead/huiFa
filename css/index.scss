@@ -1,4 +1,73 @@
 @import "sassFn";
-.body{
-  @extend %transition
+@import "common";
+.banner{
+  a,img{
+    display: inline-block;
+    width: 100%;
+  }
+}
+.swiper-container {
+  width: 100%;
+  height: 250px;
+  color: #fff;
+  text-align: center;
+}
+.swiper-wrapper{
+  box-sizing: border-box;
+}
+
+.swiper-slide .title {
+  font-style: italic;
+  font-size: 42px;
+  margin-top: 80px;
+  margin-bottom: 0;
+  line-height: 45px;
+}
+.swiper-slide p {
+  font-style: italic;
+  font-size: 25px;
+}
+.pagination {
+  position: absolute;
+  padding-left: 20%;
+  z-index: 20;
+  left: 10px;
+  top: 10px;
+}
+.swiper-pagination-switch {
+  display: block;
+  width: 22px;
+  height: 6px;
+  //border-radius: 8px;
+  background: $mianColor;
+  margin: 0 0 5px;
+  opacity: 0.8;
+  //border: 1px solid #fff;
+  cursor: pointer;
+}
+.swiper-active-switch {
+  //background: #fff;
+}
+.pagination {
+  position: absolute;
+  z-index: 20;
+  bottom: 10px;
+  width: 100%;
+  height: 10px;
+  text-align: center;
+}
+.swiper-pagination-switch {
+  display: inline-block;
+  width: 22px;
+  height: 6px;
+  //border-radius: 8px;
+  background: #fff;
+  margin: 0 5px;
+  opacity: 0.8;
+  //border: 1px solid #fff;
+  cursor: pointer;
+}
+.swiper-active-switch {
+  background: $mianColor;
+  @include opacity(90);
 }
