@@ -453,6 +453,7 @@ footer .technology {
   .navList {
     height: 0;
     opacity: 0;
+    display: none;
     margin-top: -14px;
     padding: 0 !important;
     -webkit-transition: 1s all ease !important;
@@ -471,6 +472,7 @@ footer .technology {
       height: 104px; }
     .navList.active {
       opacity: 1;
+      display: block;
       height: 260px; }
 
   .aboutHuifa .Word .left, .aboutHuifa .Word .right {

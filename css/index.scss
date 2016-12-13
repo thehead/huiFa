@@ -258,6 +258,7 @@
   .navList{
     height: 0;
     opacity: 0;
+    display: none;
     margin-top: -14px;
     padding: 0 !important;
     -webkit-transition: 1s all ease !important;
@@ -282,6 +283,7 @@
     }
     &.active{
       opacity: 1;
+      display: block;
       height: 260px;
     }
   }
