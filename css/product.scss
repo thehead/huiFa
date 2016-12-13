@@ -1,0 +1,83 @@
+@import "sassFn";
+@import "common";
+.head{
+  width: 100%;
+  margin-top: 100px;
+  img{
+    width: 100%;
+  }
+}
+.product{
+  &.container{
+    width: 100%;
+    max-width: 850px;
+  }
+  padding: 70px 0;
+
+  .choose{
+    border-bottom: 1px solid #d7d7d7;
+    margin-bottom: 70px;
+    .chooseBox{
+      margin-left: 20px;
+    }
+    a{
+      display: inline-block;
+      padding: 0 20px 15px 20px;
+      font-size: 16px;
+      &.active{
+        border-bottom: 2px solid $mianColor;
+      }
+    }
+  }
+
+  ul{
+    @extend %clearfix;
+    li{
+      position: relative;
+      @extend %fl;
+      width: 33%;
+      text-align: center;
+      img{
+        width: 100%;
+        max-width: 200px;
+      }
+      @extend %transition;
+
+      .display{
+        @include opacity(100);
+        width: 100%;
+        background: $mianColor;
+      }
+    }
+    li:hover{
+      img{
+        box-shadow:0px 0px 8px $mianColor;
+      }
+    }
+  }
+}
+.product1{
+  margin-bottom: 30px;
+}
+.page{
+  width: 200px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 40px;
+
+  .word,.active{
+    color: #bf8923;
+  }
+}
+
+@media (max-width: 420px) {
+  .product{
+    padding: 30px 0!important;
+  }
+  .choose{
+    margin-bottom: 20px!important;
+  }
+  .product1{
+    margin-bottom: 20px!important;
+  }
+}

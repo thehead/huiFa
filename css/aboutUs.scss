@@ -1,0 +1,57 @@
+@import "common";
+.head{
+  width: 100%;
+  margin-top: 100px;
+  img{
+    width: 100%;
+  }
+}
+.display{
+  .container{
+    margin: 40px auto;
+    max-width: 850px;
+    .right{
+      float: right!important;
+    }
+  }
+  .displayShow{
+    .h2Header{
+      margin-bottom: 30px;
+    }
+  }
+  .active{
+    color: #f5a738!important;
+  }
+  .product{
+    color: $mianColor;
+  }
+  .right{
+    width: 70%;
+    max-width: 860px;
+    img{
+      width: 100%;
+    }
+    h2{
+      font-size: 24px;
+      padding-bottom: 20px;
+    }
+    p{
+      padding-top: 20px;
+      line-height: 30px;
+      font-size: 16px;
+    }
+  }
+  .honour{
+  }
+}
+
+@media (max-width: 500px){
+  .contentBox{
+    .right{
+      width: 100%!important;
+    }
+    .left{
+      width: 100%!important;;
+    }
+  }
+}

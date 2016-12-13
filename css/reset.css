@@ -73,7 +73,7 @@ html {
 body{
     font-family:Microsoft yahei;
 }
-a{text-decoration: none;}
+a{text-decoration: none;-webkit-tap-highlight-color: transparent;}
 
 figure {
     -webkit-margin-before: 0em;

@@ -110,7 +110,7 @@
 }
 
 .huiFaPreduct{
-  background: url(../images/productBg.png) center no-repeat;
+  background: url(../images/indexBanner2.png) center no-repeat;
   ul{
     @extend %clearfix;
     li{
@@ -213,6 +213,10 @@
           h3{
             padding: 10px;
             font-size: 18px;
+            width: 90%;
+            white-space:nowrap;
+            overflow:hidden;
+            text-overflow:ellipsis
           }
           p{
             padding: 0 10px 10px;
@@ -246,6 +250,86 @@
     }
     .newsIndustry{
       display: none;
+    }
+  }
+}
+
+@media (max-width: 930px){
+  .navList{
+    height: 0;
+    opacity: 0;
+    margin-top: -14px;
+    padding: 0 !important;
+    -webkit-transition: 1s all ease !important;
+    transition: 1s all ease !important;
+    li{
+      width: 120px;
+      padding: 0!important;
+      text-align: center;
+      background: rgba(255,255,255,0.85);
+      border: 1px solid $borderColor;
+      display: block!important;
+      line-height: 50px;
+    }
+    .infoNews{
+      ul{
+        top:0!important;
+        left: -102%!important;
+        height: 104px;
+      }
+    }
+    .infoNews:hover{
+    }
+    &.active{
+      opacity: 1;
+      height: 260px;
+    }
+  }
+
+  .aboutHuifa{
+    .Word{
+      .left,.right{
+        float: none!important;
+      }
+      .left{
+        width: 100%!important;
+      }
+      .right{
+        width: 100%!important;
+        margin: 0 auto;
+        padding-top: 40px;
+        max-width: 500px;
+        img{
+          padding-left: 0!important;
+        }
+      }
+    }
+  }
+
+}
+
+@media (max-width: 414px){
+  .aboutHuifa{
+    h2{
+      font-size: 24px!important;
+    }
+  }
+  .news{
+    h2{
+      font-size: 24px!important;
+    }
+    .newsNum{
+      li{
+        width: 100%!important;
+      }
+      li.second{
+        margin: 20px 0!important;
+      }
+    }
+  }
+  .tap{
+    li{
+      font-size: 19px!important;
     }
   }
 }

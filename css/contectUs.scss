@@ -1,0 +1,151 @@
+@import "sassFn";
+@import "common";
+.head{
+  width: 100%;
+  margin-top: 100px;
+  img{
+    width: 100%;
+  }
+}
+.contectUs{
+  .container {
+    margin: 40px auto;
+    max-width: 850px;
+    @extend %clearfix;
+  }
+  .left{
+    @extend %fl;
+    @extend %box-sizing;
+    width: 50%;
+    h3{
+      color:  $mianColor;
+      font-size: 20px;
+    }
+    p,textarea{
+      margin-top: 10px;
+    }
+    p{
+      font-size: 15px;
+      input{
+        @extend %box-sizing;
+        border: 1px solid #b7b7b7;
+        padding: 5px;
+        width: 100%;
+      }
+    }
+    .inputGroup{
+      @extend %clearfix;
+
+      input:first-child{
+        @extend %fl;
+        width: 44%;
+      }
+      input:last-child{
+        @extend %fr;
+        width: 54%;
+      }
+    }
+    textarea{
+      width: 100%;
+      height: 230px;
+      font-size: 15px;
+      border: 1px solid #b7b7b7;
+      padding: 5px;
+      resize:none;
+      @extend %box-sizing;
+    }
+    .testBox{
+      position: relative;
+      input{
+        width: 110px;
+      }
+      span{
+        position: absolute;
+        left: 120px;
+        display: inline-block;
+        width: 100px;
+        height: 34px;
+        background: #6d6d6d;
+      }
+    }
+    input[type=submit]{
+      background: url(../images/map-inputImg.png) center no-repeat;
+      background-color: $mianColor;
+      color: #fff;
+    }
+    input:focus, textarea:focus{
+      color: $mianColor;
+      border: 1px solid $mianColor;
+    }
+    input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder{
+      color: $mianColor;
+    }
+    input:focus:-moz-placeholder, textarea:focus:-moz-placeholder{
+      color: $mianColor;
+    }
+    input:focus::-moz-placeholder, textarea:focus::-moz-placeholder{
+      color: $mianColor;
+    }
+    input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder{
+      color: $mianColor;
+    }
+  }
+
+  .right{
+    @extend %fl;
+    @extend %box-sizing;
+    padding-left: 5%;
+    margin-top: 90px;
+    width: 50%;
+
+    ul{
+      @extend %clearfix;
+      li{
+        @extend %fl;
+        @extend %box-sizing;
+        width: 45%;
+        margin: 5px;
+        height: 120px;
+        text-align: center;
+        border: 1px solid #8b8b8b;
+        div{
+          position: relative;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background: #8b8b8b;
+          text-align: center;
+          line-height: 45px;
+          left: 50%;
+          margin-left: -20px;
+          margin-top: 15px;
+          margin-bottom: 10px;
+          img{
+            width: 40%;
+          }
+        }
+      }
+      li:hover{
+        border: 1px solid $mianColor;
+        p{
+          color: $mianColor;
+        }
+        div{
+          background: $mianColor;
+        }
+      }
+    }
+  }
+
+}
+
+@media (max-width: 768px){
+  .left{
+    width: 100%!important;
+  }
+  .right{
+    margin-top: 30px!important;
+    width: 100% !important;
+    padding-left: 0!important;
+  }
+}

@@ -169,16 +169,16 @@ footer{
               }
             }
             .Qrimg{
-                width: 100px;
-                img{
-                  width: 100%;
-                  padding: 8px;
-                }
+              width: 100px;
+              img{
+                width: 100%;
+                padding: 8px;
+              }
             }
             .QrWord{
-                position: absolute;
-                right: 30px;
-                top: 20px;
+              position: absolute;
+              right: 30px;
+              top: 20px;
             }
             .web{
               top: 30px;
@@ -189,17 +189,17 @@ footer{
     }
     .bottom{
       ul{
-       li{
-         display: inline-block;
-         line-height: 98px;
-         padding: 0 4px;
-         color: #fff;
-         font-size: 14px;
-         a{
-           color: #fff;
-           font-size: 14px;
-         }
-       }
+        li{
+          display: inline-block;
+          line-height: 98px;
+          padding: 0 4px;
+          color: #fff;
+          font-size: 14px;
+          a{
+            color: #fff;
+            font-size: 14px;
+          }
+        }
       }
     }
   }
@@ -242,33 +242,83 @@ footer{
     }
   }
 
-  .navList{
-    height: 0;
-    //overflow: hidden;
-    margin-top: -14px;
-    padding: 0 !important;
-    -webkit-transition: 1s all ease !important;
-    transition: 1s all ease !important;
-    li{
-      width: 120px;
-      padding: 0!important;
-      text-align: center;
-      background: rgba(255,255,255,0.85);
-      border: 1px solid $borderColor;
-      display: block!important;
-      line-height: 50px;
-    }
-    .infoNews{
-      ul{
-        top:0!important;
-        left: -102%!important;
-        height: 104px;
+  footer{
+    .top{
+      padding: 10px!important;
+      .Mleft,.Mright{
+        float: none!important;
+        width: 100%!important;
+        box-sizing: border-box!important;
+      }
+      .Mright{
+        margin: 0!important;
+        padding: 20px 0;
       }
     }
-    .infoNews:hover{
+  }
+  .bottom{
+    li{
+      line-height: 30px!important;
     }
-    &.active{
-      height: 260px;
+  }
+}
+
+@media (max-width: 414px){
+  .logo{
+    width: 100px!important;
+  }
+  footer{
+    .QR{
+      width: 150px!important;
+      .Qrimg{
+        width: 60px!important;
+      }
+      .QrWord{
+        right: 5px!important;
+        top: 15px!important;
+        p{
+          font-size: 12px!important;
+        }
+      }
+    }
+    .Mright{
+      padding: 0!important;
+    }
+  }
+}
+
+.displayShow{
+  margin-top: 100px;
+  .h2Header{
+    font-size: 20px;
+  }
+  .contentBox{
+    @extend %clearfix;
+    .left,.right{
+      float: left;
+      .Word{
+        h2{
+          font-size: 20px;
+          padding: 0 20px 10px 0;
+          color: $mianColor;
+          border-bottom: 1px solid #ececec;
+        }
+        p{
+          font-size: 17px;
+          padding: 10px 20px;
+          border-bottom: 1px solid #ececec;
+        }
+      }
+      .qrImg{
+        .qrImgList{
+          width: 100%;
+          max-width: 160px;
+          margin-top: 10px;
+          img{
+            width: 100%;
+          }
+        }
+      }
     }
   }
 }

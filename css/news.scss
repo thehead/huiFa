@@ -1,0 +1,133 @@
+@import "sassFn";
+@import "common";
+.head{
+  width: 100%;
+  margin-top: 100px;
+  img{
+    width: 100%;
+  }
+}
+.news{
+  padding: 42px 0;
+  background: #fff;
+  .container{
+    position: relative;
+
+  }
+  h3{
+    font-size: 18px;
+    padding-bottom: 20px;
+    margin-left: 15px;
+    span.active{
+      color: $mianColor;
+    }
+  }
+}
+.newsContainer{
+  @extend %clearfix;
+  overflow: hidden;
+  .newsList{
+    @extend %fl;
+    width: 30%;
+    border: 1px solid $mianColor;
+    margin: 1.5%;
+    .listBox{
+      overflow: hidden;
+      img{
+        width: 100%;
+        @extend %transition;
+      }
+    }
+  }
+  .newsList:hover{
+    box-shadow: 0 0 8px $mianColor;
+    span.active{
+      color: $mianColor;
+    }
+    img{
+      transform: scale(1.2);
+    }
+  }
+  .listWord{
+    padding: 8px;
+    h4{
+      font-size: 12px;
+      span.active{
+        font-size: 18px;
+      }
+    }
+  }
+}
+.newsHeader{
+  margin-left: 0!important;
+}
+.page{
+  float: right;
+  display: inline-block;
+  padding-right: 1.5%;
+  a.active{
+    padding-left: 10px;
+    color: $mianColor;
+  }
+}
+
+//新闻信息页面
+.newsInfomation{
+  padding-bottom: 80px;
+  .container{
+    max-width: 880px;
+    h3{
+      text-align: center;
+      font-size: 26px;
+    }
+    p{
+      font-size: 15px;
+      text-indent: 30px;
+      padding-bottom: 10px;
+    }
+    p.active{
+      color: $mianColor;
+    }
+    img{
+      width: 100%;
+    }
+  }
+  .share{
+    overflow: hidden;
+    .jiathis_style{
+      padding-left: 30%;
+      width: 400px;
+      height: 30px;
+      text-align: center;
+    }
+  }
+
+}
+
+@media (max-width: 500px){
+  .newsList{
+    width: 100%!important;
+  }
+
+  .jiathis_style{
+    padding-left: 20px!important;
+    width: 400px;
+    height: 30px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 400px){
+  .share{
+    overflow: auto!important;
+    .jiathis_style{
+      width: 190px!important;
+      padding-left: 30px!important;
+      height: 50px!important;
+      .time{
+        display: inline-block;
+        margin-top: 10px; ;
+      }
+    }
+  }
+}

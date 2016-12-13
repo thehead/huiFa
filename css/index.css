@@ -4,10 +4,10 @@ header nav .logo, footer .descripe .top .container .Mleft, footer .descripe .top
 header nav .nav, footer .technology .container p:last-child, .news .container .newsNum .newsList div div {
   float: right; }
 
-header nav, footer .descripe .top .container, footer .technology .container, .aboutHuifa .Word, .huiFaPreduct ul, .news .container .tap, .news .container .newsNum, .news .container .newsNum .newsList div {
+header nav, footer .descripe .top .container, footer .technology .container, .displayShow .contentBox, .aboutHuifa .Word, .huiFaPreduct ul, .news .container .tap, .news .container .newsNum, .news .container .newsNum .newsList div {
   *height: 1%;
   *height: auto !important; }
-  header nav:after, footer .descripe .top .container:after, footer .technology .container:after, .aboutHuifa .Word:after, .huiFaPreduct ul:after, .news .container .tap:after, .news .container .newsNum:after, .news .container .newsNum .newsList div:after {
+  header nav:after, footer .descripe .top .container:after, footer .technology .container:after, .displayShow .contentBox:after, .aboutHuifa .Word:after, .huiFaPreduct ul:after, .news .container .tap:after, .news .container .newsNum:after, .news .container .newsNum .newsList div:after {
     clear: both;
     content: '.';
     display: block;
@@ -36,10 +36,10 @@ header nav .logo, footer .descripe .top .container .Mleft, footer .descripe .top
 header nav .nav, footer .technology .container p:last-child, .news .container .newsNum .newsList div div {
   float: right; }
 
-header nav, footer .descripe .top .container, footer .technology .container, .aboutHuifa .Word, .huiFaPreduct ul, .news .container .tap, .news .container .newsNum, .news .container .newsNum .newsList div {
+header nav, footer .descripe .top .container, footer .technology .container, .displayShow .contentBox, .aboutHuifa .Word, .huiFaPreduct ul, .news .container .tap, .news .container .newsNum, .news .container .newsNum .newsList div {
   *height: 1%;
   *height: auto !important; }
-  header nav:after, footer .descripe .top .container:after, footer .technology .container:after, .aboutHuifa .Word:after, .huiFaPreduct ul:after, .news .container .tap:after, .news .container .newsNum:after, .news .container .newsNum .newsList div:after {
+  header nav:after, footer .descripe .top .container:after, footer .technology .container:after, .displayShow .contentBox:after, .aboutHuifa .Word:after, .huiFaPreduct ul:after, .news .container .tap:after, .news .container .newsNum:after, .news .container .newsNum .newsList div:after {
     clear: both;
     content: '.';
     display: block;
@@ -216,27 +216,55 @@ footer .technology {
       padding-top: 30px;
       width: 40px; }
 
-  .navList {
-    height: 0;
-    overflow: hidden;
-    margin-top: -14px;
-    padding: 0 !important;
-    -webkit-transition: 1s all ease !important;
-    transition: 1s all ease !important; }
-    .navList li {
-      width: 120px;
-      padding: 0 !important;
-      text-align: center;
-      background: rgba(255, 255, 255, 0.85);
-      border: 1px solid #bdbdbd;
-      display: block !important;
-      line-height: 50px; }
-    .navList .infoNews ul {
-      top: 0 !important;
-      left: -102% !important;
-      height: 104px; }
-    .navList.active {
-      height: 260px; } }
+  footer .top {
+    padding: 10px !important; }
+    footer .top .Mleft, footer .top .Mright {
+      float: none !important;
+      width: 100% !important;
+      box-sizing: border-box !important; }
+    footer .top .Mright {
+      margin: 0 !important;
+      padding: 20px 0; }
+
+  .bottom li {
+    line-height: 30px !important; } }
+@media (max-width: 414px) {
+  .logo {
+    width: 100px !important; }
+
+  footer .QR {
+    width: 150px !important; }
+    footer .QR .Qrimg {
+      width: 60px !important; }
+    footer .QR .QrWord {
+      right: 5px !important;
+      top: 15px !important; }
+      footer .QR .QrWord p {
+        font-size: 12px !important; }
+  footer .Mright {
+    padding: 0 !important; } }
+.displayShow {
+  margin-top: 100px; }
+  .displayShow .h2Header {
+    font-size: 20px; }
+  .displayShow .contentBox .left, .displayShow .contentBox .right {
+    float: left; }
+    .displayShow .contentBox .left .Word h2, .displayShow .contentBox .right .Word h2 {
+      font-size: 20px;
+      padding: 0 20px 10px 0;
+      color: #d2b701;
+      border-bottom: 1px solid #ececec; }
+    .displayShow .contentBox .left .Word p, .displayShow .contentBox .right .Word p {
+      font-size: 17px;
+      padding: 10px 20px;
+      border-bottom: 1px solid #ececec; }
+    .displayShow .contentBox .left .qrImg .qrImgList, .displayShow .contentBox .right .qrImg .qrImgList {
+      width: 100%;
+      max-width: 160px;
+      margin-top: 10px; }
+      .displayShow .contentBox .left .qrImg .qrImgList img, .displayShow .contentBox .right .qrImg .qrImgList img {
+        width: 100%; }
+
 .banner {
   margin-top: 100px; }
   .banner a, .banner img {
@@ -326,7 +354,7 @@ footer .technology {
       max-width: 500px; }
 
 .huiFaPreduct {
-  background: url(../images/productBg.png) center no-repeat; }
+  background: url(../images/indexBanner2.png) center no-repeat; }
   .huiFaPreduct ul li {
     width: 25%; }
     .huiFaPreduct ul li img {
@@ -395,7 +423,11 @@ footer .technology {
         width: 100%; }
       .news .container .newsNum .newsList div h3 {
         padding: 10px;
-        font-size: 18px; }
+        font-size: 18px;
+        width: 90%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; }
       .news .container .newsNum .newsList div p {
         padding: 0 10px 10px;
         font-size: 14px; }
@@ -416,5 +448,54 @@ footer .technology {
     margin: 0 5%; }
   .news .container .newsIndustry {
     display: none; }
+
+@media (max-width: 930px) {
+  .navList {
+    height: 0;
+    opacity: 0;
+    margin-top: -14px;
+    padding: 0 !important;
+    -webkit-transition: 1s all ease !important;
+    transition: 1s all ease !important; }
+    .navList li {
+      width: 120px;
+      padding: 0 !important;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid #bdbdbd;
+      display: block !important;
+      line-height: 50px; }
+    .navList .infoNews ul {
+      top: 0 !important;
+      left: -102% !important;
+      height: 104px; }
+    .navList.active {
+      opacity: 1;
+      height: 260px; }
+
+  .aboutHuifa .Word .left, .aboutHuifa .Word .right {
+    float: none !important; }
+  .aboutHuifa .Word .left {
+    width: 100% !important; }
+  .aboutHuifa .Word .right {
+    width: 100% !important;
+    margin: 0 auto;
+    padding-top: 40px;
+    max-width: 500px; }
+    .aboutHuifa .Word .right img {
+      padding-left: 0 !important; } }
+@media (max-width: 414px) {
+  .aboutHuifa h2 {
+    font-size: 24px !important; }
+
+  .news h2 {
+    font-size: 24px !important; }
+  .news .newsNum li {
+    width: 100% !important; }
+  .news .newsNum li.second {
+    margin: 20px 0 !important; }
+
+  .tap li {
+    font-size: 19px !important; } }
 
 /*# sourceMappingURL=index.css.map */

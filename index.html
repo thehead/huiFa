@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="keywords" content="惠发粮油贸易行" />
     <meta name="description" content="惠发粮油贸易行" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>惠发粮油贸易行</title>
@@ -25,8 +27,8 @@
                         <img src="images/list.png" alt="菜单">
                     </div>
                     <ul class="navList">
-                        <li><a href="javascript:;">首页</a></li>
-                        <li><a href="javascript:;">关于我们</a></li>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="aboutUs.html">关于我们</a></li>
                         <li class="infoNews">
                             <a href="javascript:;">咨询新闻</a>
                             <ul>
@@ -42,7 +44,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li><a href="javascript:;">惠发产品</a></li>
+                        <li><a href="product.html">惠发产品</a></li>
                         <li><a href="javascript:;">联系我们</a></li>
                     </ul>
                 </div>
@@ -98,7 +100,7 @@
         </div>
     </section>
     <section class="huiFaPreduct">
-        <div class="container">
+        <div class="container" onclick="location.href='product.html'">
             <div class="swiper-container1">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide red-slide">
@@ -338,31 +340,12 @@
             pagination : '.pagination',
             loop : true,//可选选项，开启循环
         });
-        function resizeLb() {
-            //重新算高度 赋值给swiper
-            var height=$('.img').eq(0).height();
-            $('.swiper-container').css('height',height);
-
-            //进度点
-            $('.pagination').css('top',height-30);
-            console.log(height);
-        }
-//        $(function () {
-//            resizeLb();
-//
-//        });
-        window.onload = function () {
-            resizeLb();
-        };
-        window.onresize=function () {
-            resizeLb();
-        };
 
         //第二个滑动
         var mySwiper1 = new Swiper('.swiper-container1',{
-            pagination: '.pagination1',
-            paginationClickable: true,
-            moveStartThreshold: 100
+            autoplay : 3000,//可选选项，自动滑动
+            pagination : '.pagination1',
+            loop : true,//可选选项，开启循环
         });
 
         //tap切换
@@ -383,17 +366,14 @@
             $('.infoNews').on('click',function () {
                $(this).children('ul').show();
             });
-            var btnShow=false;
-            $('.navBtn').on('click',function () {
-                if(btnShow){
-                    $('.navList').removeClass('active');
-                    btnShow=false;
-                }else {
-                    $('.navList').addClass('active');
-                    $('.navList').css('overflow','auto');
-                    btnShow=true;
-                }
-            })
+
+
+            //第二个滑动按钮
+            function point() {
+                var porintHeight=$('.swiper-container1 .title').eq(0).height()+100;
+                console.log(porintHeight);
+                $('.pagination1').css('top',porintHeight)
+            }
         }
     </script>
 </body>

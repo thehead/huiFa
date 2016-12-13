@@ -4,10 +4,10 @@ header nav .logo, footer .descripe .top .container .Mleft, footer .descripe .top
 header nav .nav, footer .technology .container p:last-child {
   float: right; }
 
-header nav, footer .descripe .top .container, footer .technology .container {
+header nav, footer .descripe .top .container, footer .technology .container, .displayShow .contentBox {
   *height: 1%;
   *height: auto !important; }
-  header nav:after, footer .descripe .top .container:after, footer .technology .container:after {
+  header nav:after, footer .descripe .top .container:after, footer .technology .container:after, .displayShow .contentBox:after {
     clear: both;
     content: '.';
     display: block;
@@ -211,5 +211,62 @@ footer .technology {
         font-size: 12px !important; }
   footer .Mright {
     padding: 0 !important; } }
+.displayShow {
+  margin-top: 100px; }
+  .displayShow .h2Header {
+    font-size: 20px; }
+  .displayShow .contentBox .left, .displayShow .contentBox .right {
+    float: left; }
+    .displayShow .contentBox .left .Word h2, .displayShow .contentBox .right .Word h2 {
+      font-size: 20px;
+      padding: 0 20px 10px 0;
+      color: #d2b701;
+      border-bottom: 1px solid #ececec; }
+    .displayShow .contentBox .left .Word p, .displayShow .contentBox .right .Word p {
+      font-size: 17px;
+      padding: 10px 20px;
+      border-bottom: 1px solid #ececec; }
+    .displayShow .contentBox .left .qrImg .qrImgList, .displayShow .contentBox .right .qrImg .qrImgList {
+      width: 100%;
+      max-width: 160px;
+      margin-top: 10px; }
+      .displayShow .contentBox .left .qrImg .qrImgList img, .displayShow .contentBox .right .qrImg .qrImgList img {
+        width: 100%; }
 
-/*# sourceMappingURL=common.css.map*/
+.head {
+  width: 100%;
+  margin-top: 100px; }
+  .head img {
+    width: 100%; }
+
+.display .container {
+  margin: 40px auto;
+  max-width: 850px; }
+  .display .container .right {
+    float: right !important; }
+.display .displayShow .h2Header {
+  margin-bottom: 30px; }
+.display .active {
+  color: #f5a738 !important; }
+.display .product {
+  color: #d2b701; }
+.display .right {
+  width: 70%;
+  max-width: 860px; }
+  .display .right img {
+    width: 100%; }
+  .display .right h2 {
+    font-size: 24px;
+    padding-bottom: 20px; }
+  .display .right p {
+    padding-top: 20px;
+    line-height: 30px;
+    font-size: 16px; }
+
+@media (max-width: 500px) {
+  .contentBox .right {
+    width: 100% !important; }
+  .contentBox .left {
+    width: 100% !important; } }
+
+/*# sourceMappingURL=aboutUs.css.map */
